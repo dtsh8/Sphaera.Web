@@ -20,7 +20,7 @@ document.getElementById("logout").addEventListener("click", logout, false);
 document.getElementById("cards").addEventListener("click", cards, false);
 
 var config = {
-    authority: "https://localhost:44333",
+    authority: "https://localhost:5001",
     client_id: "js",
     redirect_uri: "https://localhost:44358/callback.html",
     response_type: "code",
@@ -49,7 +49,7 @@ function logout() {
 
 function api() {
     mgr.getUser().then(function (user) {
-        var url = "http://localhost:44343/identity";
+        var url = "https://localhost:44343/identity";
 
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url);
@@ -61,17 +61,17 @@ function api() {
     });
 }
 
-//function cards() {
-//    mgr.getUser().then(function (user) {
-//        var url = "http://localhost:5001/api/cards";
+function cards() {
+    mgr.getUser().then(function (user) {
+        var url = "https://localhost:44343/api/cards";
 
-//        var xhr = new XMLHttpRequest();
-//        xhr.open("GET", url);
-//        //console.log(xhr);
-//        xhr.onload = function () {
-//            log(JSON.parse(xhr.responseText));
-//        };
-//        xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
-//        xhr.send();
-//    });
-//}
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        
+        xhr.onload = function () {
+            log(JSON.parse(xhr.responseText));
+        };
+        xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
+        xhr.send();
+    });
+}
