@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.1.0" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="IdentityServer4" Version="2.3.0" />
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Serilog" Version="2.7.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+  </ItemGroup>
+<ItemGroup>
+    <Content Update="appSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
