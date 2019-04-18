@@ -35,7 +35,7 @@ namespace Sphaera.Web.Api
                 .AddJwtBearer("Bearer", options =>
                 {
                     options.Authority = Configuration["IdentityServer"];
-                    options.RequireHttpsMetadata = false;
+                    options.RequireHttpsMetadata = true;
                     options.Audience = "api1";
                 });
 
@@ -43,7 +43,7 @@ namespace Sphaera.Web.Api
             {
                 options.AddPolicy("ClientsOnly", policy =>
                 {
-                    policy.WithOrigins(Configuration["JSClient_Uri"])
+                    policy.WithOrigins(Configuration["JSClient_Uri"], "https://localhost:44334", "https://localhost:44301")
                     .AllowAnyHeader()
                     .AllowAnyMethod();
                 });

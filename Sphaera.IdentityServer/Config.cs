@@ -148,8 +148,34 @@ namespace Sphaera.IdentityServer
                         IdentityServerConstants.StandardScopes.Profile,
                         "api1"
                     }
+                },
+                //new Client
+                //{
+                //    ClientId = "angular_spa",
+                //    ClientName = "Angular 4 Client",
+                //    AllowedGrantTypes = GrantTypes.Code,
+                //    RequirePkce = true,
+                //    RequireClientSecret = false,
+                //    AllowedScopes = new List<string> {"openid", "profile", "api1"},
+                //    RedirectUris = new List<string> {"http://localhost:4200/auth-callback", "http://localhost:4200/silent-refresh.html"},
+                //    PostLogoutRedirectUris = new List<string> {"http://localhost:4200/"},
+                //    AllowedCorsOrigins = new List<string> {"http://localhost:4200"},
+                //    AllowAccessTokensViaBrowser = true
+                //},
+                new Client
+                {
+                    ClientId = "react_ts",
+                    ClientName = "Typescript react Client",
+                    AllowedGrantTypes = GrantTypes.Code,
+                    RequirePkce = true,
+                    RequireClientSecret = false,
+                    AllowedScopes = new List<string> {"openid", "profile", "api1"},
+                    RedirectUris = new List<string> { "https://localhost:44301/signin-callback.html", "https://localhost:44301/silent-renew.html"},
+                    PostLogoutRedirectUris = new List<string> {"https://localhost:44301/"},
+                    AllowedCorsOrigins = new List<string> {"https://localhost:44301"},
+                    AllowAccessTokensViaBrowser = true
                 }
-                
+
             };
         }
     }

@@ -14,8 +14,24 @@ namespace Sphaera.Web.Api.Controllers
     {
         public IActionResult Get()
         {
-            string[] strings = { "fdf", "erer" };
-            return new JsonResult(strings);
+            //string[] strings = { "fdf", "erer" };
+            var cards = new List<Card> {
+                new Card { CardId = 1, IncidentId=222, IsArchived = false, Description = "lorem 2222 ipsum" },
+                new Card { CardId = 2, IncidentId=555, IsArchived = false, Description = "lorem 5555 ipsum" },
+                new Card { CardId = 3, IncidentId=333, IsArchived = false, Description = "lorem 3333 ipsum" },
+                new Card { CardId = 4, IncidentId=123, IsArchived = true, Description = "lorem 123 ipsum" },
+            };
+            return new JsonResult(cards);
         }
+    }
+
+    public class Card
+    {
+        public int CardId { get; set; }
+        public int IncidentId { get; set; }
+
+        public bool IsArchived { get; set; }
+
+        public string Description { get; set; }
     }
 }

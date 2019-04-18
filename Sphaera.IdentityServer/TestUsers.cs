@@ -37,7 +37,7 @@ namespace Sphaera.IdentityServer
                     new Claim("location", "somewhere")
                 }
             },
-            new TestUser{SubjectId = "88421113", Username = "tom", Password = "tom",
+            new TestUser{SubjectId = "88421117", Username = "tom", Password = "tom",
                 Claims =
                 {
                     new Claim(JwtClaimTypes.Name, "tom tom"),
