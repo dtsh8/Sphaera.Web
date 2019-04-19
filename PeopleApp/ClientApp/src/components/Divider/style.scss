@@ -1,0 +1,15 @@
+@import 'sass/style';
+
+.divider {
+  display: flex;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  &_dark-divider {
+    background-color: $lightGray;
+  }
+
+  &_info-divider {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssignmentService.cs" />
+    <Compile Remove="AssignmentStateService.cs" />
+    <Compile Remove="ClaimStateService.cs" />
+    <Compile Remove="DispatchSvcService.cs" />
+    <Compile Remove="FileService.cs" />
+    <Compile Remove="MapObjectsService.cs" />
+    <Compile Remove="NoticeService.cs" />
+    <Compile Remove="OrganizationService.cs" />
+    <Compile Remove="ReactionPlanService.cs" />
+    <Compile Remove="ResourceDictionaryService.cs" />
+    <Compile Remove="ResourceService.cs" />
+    <Compile Remove="ResourceStateService.cs" />
+    <Compile Remove="ResourceTypeService.cs" />
+    <Compile Remove="ServiceTypeService.cs" />
+    <Compile Remove="WebPushSubscriptionService.cs" />
+  </ItemGroup>
+
+</Project>

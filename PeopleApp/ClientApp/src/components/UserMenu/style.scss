@@ -1,0 +1,34 @@
+@import 'sass/style';
+
+.user-menu {
+  .list-group {
+    .list-group-item {
+      text-align: left;
+      font-size: 14px;
+      background-color: $endeavour;
+      border-color: $endeavour;
+
+      @include media-query(sm) {
+        padding: 15px 25px;
+      }
+    }
+
+    .list-group-item:hover {
+      cursor: pointer;
+      background-color: $darkBlue;
+    }
+
+    .icon-user {
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      &:before {
+        color: $whiteSolid;
+      }
+    }
+  }
+
+  &__menu-item {
+    color: $whiteSolid !important;
+  }
+}

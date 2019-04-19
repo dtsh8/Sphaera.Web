@@ -1,0 +1,169 @@
+@import 'sass/style';
+
+.auth-form {
+  padding: 30px 20px;
+  background-color: $porcelain;
+  border: 1px solid $alto;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 66px);
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+
+    @include media-query(xs) {
+      display: block;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+
+      @include media-query(xs) {
+        display: block;
+      }
+
+      .col-xs-12 {
+        @include media-query(xs) {
+          padding: 0;
+        }
+      }
+    }
+
+    .auth-form .dx-placeholder {
+      @include media-query(xs) {
+        padding-left: 10px;
+        font-size: 12px;
+      }
+    }
+
+    .auth-form .dx-texteditor-input {
+      @include media-query(xs) {
+        padding: 18px 10px;
+      }
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: $exo2, sans-serif;
+    color: $blackSolid;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 45px;
+  }
+
+  .dx-texteditor-input {
+    font-family: FontAwesome, Helvetica, sans-serif;
+    padding: 18px 20px;
+  }
+
+  .username {
+    .dx-texteditor-container {
+      position: relative;
+      &:before {
+        content: '\e90e';
+        font-family: $icomoon;
+        position: absolute;
+        right: 14px;
+        top: 12px;
+        color: $nobel;
+        font-size: 18px;
+      }
+    }
+
+    .dx-texteditor-input {
+      padding-right: 35px;
+    }
+  }
+
+  .password {
+    .dx-texteditor-container {
+      position: relative;
+      &:before {
+        content: '\e908';
+        font-family: $icomoon;
+        position: absolute;
+        right: 18px;
+        top: 12px;
+        color: $nobel;
+        font-size: 20px;
+      }
+    }
+
+    .dx-texteditor-input {
+      padding-right: 35px;
+    }
+  }
+
+  &__registration {
+    text-align: center;
+    margin: 20px 0 auto 0;
+  }
+
+  &__button {
+    display: flex;
+    margin: 40px 0 15px;
+
+    & .dx-button-content {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    & .dx-button-text {
+      font-size: 16px;
+    }
+  }
+
+  &__forgot-password {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__remember {
+    margin-top: 20px;
+
+    & .dx-checkbox {
+      width: 100%;
+    }
+
+    & .dx-checkbox-text {
+      font-size: 16px;
+      color: $mineShaft;
+      padding-left: 25px;
+    }
+  }
+
+  .dx-placeholder {
+    opacity: 0.3;
+    font-size: 14px;
+    padding-left: 20px;
+
+    &:before {
+      padding: 0;
+    }
+  }
+}

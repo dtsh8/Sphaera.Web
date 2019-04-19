@@ -1,0 +1,327 @@
+@import 'sass/style';
+
+.dx-context-menu.dx-has-context-menu.dx-widget.dx-visibility-change-handler.dx-collection.dx-datagrid {
+  display: none;
+}
+
+.custom-data-grid {
+  overflow: auto;
+  &__wrapper {
+    min-width: 992px;
+  }
+
+  .dx-datagrid {
+    font-size: 14px;
+    margin: 0 15px;
+    background-color: $alabaster;
+    font-family: $roboto, sans-serif;
+    &.dx-filter-menu {
+      margin: 0;
+      background: $whiteSolid;
+    }
+
+    .dx-datagrid-rowsview {
+      .dx-row {
+        & > td {
+          &.bold {
+            font-weight: 700;
+          }
+          &:last-child {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    .dx-datagrid-headers {
+      margin-top: 50px;
+      .dx-datagrid-content {
+        .dx-datagrid-table {
+          .dx-row {
+            .dx-editor-cell {
+              padding: 12px 15px;
+              border-left: 1px solid $alto;
+              border-right: 1px solid $alto;
+              &:first-child {
+                border-left: 0;
+              }
+              &:last-child {
+                border-right: 0;
+              }
+            }
+          }
+        }
+      }
+      .dx-header-row {
+        .dx-datagrid-text-content {
+          font-family: $roboto, sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .dx-filter-menu {
+      &.dx-menu {
+        .dx-menu-item {
+          .dx-menu-item-content {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .dx-datagrid-filter-row {
+      .dx-menu-item-content {
+        .dx-icon {
+          color: $blackSolid;
+        }
+      }
+    }
+
+    .dx-datagrid-focus-overlay {
+      border: 0;
+    }
+    .dx-context-menu-container-border {
+      border: 0;
+      box-shadow: none;
+    }
+
+    .dx-row {
+      cursor: pointer;
+      &:nth-child(2n) {
+        background-color: $whiteSolid;
+      }
+
+      &:nth-child(2n - 1) {
+        background-color: $wildSand;
+      }
+
+      & > td {
+        padding: 15px;
+        vertical-align: middle;
+        position: relative;
+        overflow: visible;
+      }
+
+      &.dx-column-lines.dx-header-row {
+        background-color: $whiteSolid;
+      }
+    }
+
+    .dx-column-lines {
+      & > td {
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $alto;
+      }
+    }
+
+    & .dx-sort-down {
+      font-family: FontAwesome, Helvetica, sans-serif;
+
+      &:before {
+        content: '\f161';
+      }
+    }
+
+    & .dx-sort-up {
+      font-family: FontAwesome, Helvetica, sans-serif;
+      transform: rotate(180deg);
+
+      &:before {
+        content: '\f161';
+      }
+    }
+
+    .dx-header-filter {
+      &:before {
+        content: '\e906';
+        font-family: $icomoon;
+        color: $blackSolid;
+      }
+    }
+  }
+
+  .dx-datagrid-borders {
+    & > .dx-datagrid-headers {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    & > .dx-datagrid-pager {
+      border-top: none;
+      background: $whiteSolid;
+      margin: 0;
+      padding: 20px 0 30px 0;
+      border-bottom: 1px solid $lightGray;
+      .dx-pages {
+        margin: 0;
+      }
+    }
+
+    & > .dx-datagrid-rowsview {
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+    }
+  }
+
+  .dx-datagrid-rowsview {
+    border-top: none;
+
+    .dx-datagrid-table .dx-freespace-row {
+      display: none;
+
+    }
+  }
+
+  .dx-datagrid-headers {
+    font-size: 14px;
+    color: $blackSolid;
+    font-weight: 500;
+  }
+
+  .dx-pages {
+    margin-top: 30px;
+  }
+
+  &__paging-info {
+    position: relative;
+    font-size: 16px;
+    color: $blackSolid;
+    pointer-events: none;
+    padding-left: 15px;
+    margin-top: 34px;
+
+    &_several-pages {
+      margin: 0;
+      top: -54px;
+    }
+  }
+
+  &__bold-info {
+    font-size: 16px;
+    color: $blackSolid;
+    font-weight: bold;
+  }
+
+  .dx-pager {
+    & .dx-pages {
+      & .dx-prev-button {
+        border: 1px solid $alto;
+        background-color: $wildSand;
+        border-radius: 4px;
+        font-size: 14px;
+
+        &:before {
+          width: 18px;
+        }
+      }
+
+      & .dx-next-button {
+        border: 1px solid $alto;
+        background-color: $wildSand;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-left: 4px;
+
+        &:before {
+          width: 24px;
+        }
+      }
+
+      & .dx-navigate-button.dx-button-disable {
+        opacity: 1;
+      }
+
+      & .dx-page.dx-selection {
+        background-color: $denim;
+        font-size: 16px;
+        color: $whiteSolid;
+        width: auto;
+        min-width: 26px;
+        height: 26px;
+        text-align: center;
+      }
+
+      & .dx-navigate-button {
+        padding: 4px 8px;
+      }
+
+      & .dx-page {
+        width: auto;
+        min-width: 26px;
+        height: 26px;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: $wildSand;
+        border: solid 1px $alto;
+        margin-left: 4px;
+        text-align: center;
+      }
+    }
+  }
+
+  .dx-datagrid-filter-panel {
+    -ms-flex-pack: start;
+    justify-content: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+    padding: 15px 215px 15px 10px;
+    min-height: 50px;
+
+    .dx-datagrid-filter-panel-clear-filter {
+      color: $blackSolid;
+      opacity: 0.5;
+      text-decoration: none;
+      font-size: 12px;
+      border: 1px solid $alto;
+      border-radius: 4px;
+      padding: 2px 10px;
+      margin-left: 20px;
+      &:before {
+        content: '\e907';
+        font-family: $icomoon;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 2px;
+      }
+    }
+
+    .dx-icon-filter {
+      display: none;
+    }
+
+    .dx-datagrid-filter-panel-text {
+      color: $blackSolid;
+      text-decoration: none;
+      font-size: 15px;
+      display: block;
+    }
+  }
+
+  .dx-checkbox-container {
+    .dx-checkbox-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .emergency-cell {
+    text-align: center;
+  }
+}
+
+.dx-popup-wrapper {
+  .dx-checkbox-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+

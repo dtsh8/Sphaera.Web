@@ -1,0 +1,15 @@
+@import 'sass/style';
+
+.empty {
+  text-align: center;
+  margin-top: 35px;
+  padding-bottom: 115px;
+  border-bottom: 1px solid $lightGray;
+
+  &__empty-text {
+    font-size: 36px;
+    font-weight: 500;
+    color: $blackSolid;
+    opacity: 0.3;
+  }
+}

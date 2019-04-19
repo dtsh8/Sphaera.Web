@@ -1,0 +1,242 @@
+@import 'sass/style';
+
+.app-header {
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: $endeavour;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22);
+  text-align: right;
+  font-family: $roboto, sans-serif;
+  font-size: $font-md;
+  font-weight: $font-regular;
+  color: $whiteSolid;
+  z-index: 10001;
+  position: relative;
+
+  &__burger-menu {
+    display: none;
+    margin: 15px 0 0 0;
+    text-align: left;
+
+    @include media-query(sm) {
+      display: block;
+    }
+
+    @include media-query(xs) {
+      display: block;
+    }
+  }
+
+  &__logo, &__logo-full {
+    text-align: left;
+    margin-top: 15px;
+    padding-left: 25px !important;
+  }
+
+  &__logo-link {
+    max-width: 100%;
+  }
+
+  &__logo-img {
+    max-width: 100%;
+  }
+
+  &__logo-full {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__lk-enter {
+    position: relative;
+    margin: 0;
+    padding-right: 25px !important;
+
+    @include media-query(sm) {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+    }
+
+    @include media-query(xs) {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+    }
+
+    &.authorization {
+      .app-header__lk-login-form {
+        width: 328px;
+      }
+    }
+  }
+
+  &__lk-enter-button {
+    display: flex;
+    align-items: center;
+    padding: 18px 15px;
+    float: right;
+    cursor: pointer;
+    @include transition(.2s);
+
+    &_active {
+      background-color: $darkBlue;
+
+      @include media-query(sm) {
+        background: none;
+      }
+    }
+
+    @include media-query(sm) {
+      display: block;
+      float: none;
+      text-align: center;
+      padding: 17px 0;
+    }
+  }
+
+  &__lk-login-form {
+    display: none;
+    position: absolute;
+    pointer-events: none;
+    top: 70px;
+    right: 25px;
+    z-index: 1999;
+    width: 248px;
+    @include transition(.2s);
+
+    @include media-query(sm) {
+      right: 0;
+      width: 300px;
+    }
+
+    &_active {
+      display: block;
+    }
+  }
+
+  &__lk-login-form-col {
+    float: right !important;
+    padding: 0 !important;
+    max-width: 400px;
+    pointer-events: auto;
+    width: 100%;
+
+    .list-group {
+      margin: 0;
+      background: $endeavour;
+
+      @include media-query(sm) {
+        box-shadow: none;
+      }
+
+      .list-group-item {
+        @include media-query(sm) {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  &__dropdown-overlay {
+    position: fixed;
+    z-index: 10000;
+    right: 0;
+    top: 0;
+    background: $endeavour;
+    width: 300px;
+    height: 100%;
+    display: none;
+
+    &_active {
+      @include media-query(sm) {
+        display: block;
+      }
+
+      @include media-query(xs) {
+        display: block;
+      }
+    }
+  }
+
+  &__center_block {
+
+    @include media-query(xs) {
+      height: 100%;
+    }
+  }
+
+  &__center {
+    width: 250px;
+    margin: 0 auto;
+    padding: 22px 20px;
+    background-color: $watermelon;
+    text-align: center;
+
+    @include media-query(lg) {
+      padding: 18px 20px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__username {
+    @include media-query(sm) {
+      display: none;
+    }
+
+    @include media-query(xs) {
+      display: none;
+    }
+
+    @include media-query(xxs) {
+      display: none;
+    }
+  }
+
+  &__cs_img {
+    width: 30px;
+    height: 26px;
+    float: left;
+    margin-top: -3px;
+  }
+
+  &__log-in {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-top: -2px;
+
+    @include media-query(sm) {
+      width: 26px;
+      height: 26px;
+      margin-right: 0;
+    }
+  }
+
+  .log-in-icon {
+    &:before {
+      color: $whiteSolid;
+      margin-right: 10px;
+      font-size: 16px;
+
+      @include media-query(sm) {
+        margin-right: 0;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__triangle-menu-down {
+    font-size: 8px;
+    margin-left: 5px;
+
+    &.glyphicon {
+      @include media-query(sm) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import 'sass/style';
+
+.dx-checkbox-container {
+  text-align: left;
+
+  .dx-checkbox-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dx-checkbox-text {
+    color: $whiteSolid;
+    font-family: $roboto;
+  }
+}

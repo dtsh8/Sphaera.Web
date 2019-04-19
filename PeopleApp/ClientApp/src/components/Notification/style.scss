@@ -1,0 +1,9 @@
+@import 'sass/style';
+
+.notification {
+  display: flex;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  justify-content: center;
+}

@@ -1,0 +1,35 @@
+@import 'sass/style';
+
+.reminders-menu {
+  & .dx-treeview-toggle-item-visibility {
+    margin-top: 13px;
+    font-size: 20px;
+  }
+
+  & span.reminders-menu__folder {
+    font-size: 13px;
+    vertical-align: baseline;
+    margin-right: 10px;
+  }
+
+  & span.reminders-menu__arrow-right {
+    margin-right: 8px;
+    vertical-align: baseline;
+  }
+
+  & span.reminders-menu__tree-item {
+    margin-left: 22px;
+    &.active {
+      margin-left: 0;
+    }
+  }
+
+  & .dx-treeview-node.dx-state-focused > .dx-item.dx-treeview-item {
+    background: $whiteSolid;
+    color: $blackSolid;
+
+    & * {
+      color: $blackSolid;
+    }
+  }
+}

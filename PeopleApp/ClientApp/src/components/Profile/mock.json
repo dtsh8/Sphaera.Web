@@ -1,0 +1,12 @@
+{
+  "fio": "Иванов Иван Иванович",
+  "login": "ivanov",
+  "phone": "+7 926 123-45-67",
+  "email": {
+    "address": "ivanov@example.ru",
+    "activate": false
+  },
+  "organization": "АО «Новая компания»",
+  "role": "Руководитель",
+  "subordinateOrganization": "АО «Старая компания»"
+}

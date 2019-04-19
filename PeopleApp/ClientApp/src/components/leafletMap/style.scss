@@ -1,0 +1,343 @@
+@import 'sass/style';
+
+$boxShadowMarkers: 0 2px 4px 0 rgba(0, 0, 0, 0.27);
+
+@mixin status($color) {
+  color: $color;
+
+  &::before {
+    background-color: $color;
+  }
+}
+
+.incidents-leaflet {
+  height: 650px;
+
+  &__legend-status {
+    background: $whiteSolid;
+    opacity: 0.9;
+    position: relative;
+    top: -30px;
+    height: 30px;
+    z-index: 1000;
+    text-align: right;
+    padding: 6px;
+    box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.14);
+
+    span + span {
+      margin-left: 32px;
+    }
+
+    span:last-child {
+      margin-right: 15px;
+    }
+  }
+
+  &__status {
+    font-size: 14px;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      margin: 6px -12px;
+      z-index: 1;
+      border-radius: 50%;
+    }
+
+    &_work {
+      @include status($viking)
+    }
+
+    &_done {
+      @include status($nastyGreen)
+    }
+
+    &_new {
+      @include status($darkMintGreen)
+    }
+
+    &_declined {
+      @include status($watermelon)
+    }
+  }
+}
+
+.leaflet-container {
+  height: 100%;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  font-size: 18px;
+  padding: 8px 20px 0 0;
+  color: $taupeGray;
+}
+
+.leaflet-popup {
+  bottom: -7px;
+  left: -27px !important;
+}
+
+.leaflet-popup-tip-container {
+  height: 26px;
+  width: auto;
+  left: 50px;
+
+  .leaflet-popup-tip {
+    background: transparent;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 4px 0 4px;
+    border-color: $whiteSolid transparent transparent transparent;
+    transform: initial;
+    padding: initial;
+    margin: 0 auto;
+  }
+}
+
+//  маркеры
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+
+.marker-cluster {
+  width: 35px !important;
+  height: 35px !important;
+  margin-left: -11px !important;
+  margin-top: -11px !important;
+  border: solid 1px $steelBlue;
+  background-color: $viking;
+  box-shadow: $boxShadowMarkers;
+
+  div {
+    margin-left: 2px;
+    margin-top: 2px;
+    background-color: transparent;
+  }
+
+  &.marker-cluster-has-emergency {
+    width: 0 !important;
+    border: none;
+
+    span {
+      line-height: 55px;
+      color: $blackSolid;
+    }
+  }
+
+  span {
+    font-family: $roboto;
+    color: $whiteSolid;
+    font-size: 18px;
+    font-weight: $font-bold;
+  }
+}
+// end маркеры
+
+// контролы
+.leaflet-top .leaflet-control {
+  margin-top: 20px;
+}
+
+.leaflet-right .leaflet-control {
+  margin-right: 20px;
+}
+
+.leaflet-control-zoom {
+  a, a.leaflet-disabled {
+    background-color: rgba(0,0,0,0.6);
+    color: $whiteSolid;
+  }
+}
+
+.leaflet-bar {
+  a {
+    border-bottom: none;
+
+    &:hover {
+      border-bottom: none;
+      background-color: $blackSolid;
+      color: $whiteSolid;
+    }
+  }
+}
+
+.leaflet-touch {
+  .leaflet-bar {
+    border: none;
+
+    a {
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+    }
+  }
+
+  .leaflet-control-layers {
+    margin-top: 5px;
+    border: none;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 4px;
+
+    form span {
+      color: $whiteSolid;
+      font-family: $roboto;
+    }
+  }
+
+  .leaflet-control-layers-toggle {
+    width: 38px;
+    height: 38px;
+  }
+}
+// end контролы
+
+.leaflet-popup-content-wrapper {
+  width: 530px;
+  overflow: auto;
+  max-height: 220px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  padding: 20px 15px;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $alto;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $viking;
+  }
+
+  .leaflet-popup-content {
+    margin: 0;
+    width: 100% !important; // test
+  }
+
+  .leaflet-map {
+    color: $blackSolid;
+    font-size: 14px;
+    line-height: normal;
+    font-family: $roboto, sans-serif;
+
+    a:hover, a:focus {
+      text-decoration: initial;
+    }
+
+    & + .leaflet-map {
+      &::before {
+        content: "";
+        display: block;
+        margin: 10px 0 8px 0;
+        z-index: 1;
+        width: 100%;
+        border-bottom: 1px solid $jacksonsPurple;
+        opacity: 0.2;
+      }
+    }
+
+    &__title {
+      font-size: $font-md;
+      font-weight: $font-medium;
+    }
+
+    &__reason {
+      line-height: 1.9;
+      margin-bottom: 10px;
+    }
+
+    &__address {
+      margin-top: 15px;
+      margin-left: 2px;
+    }
+
+    &__date, &__address {
+      font-size: 12px;
+
+      span {
+        font-weight: $font-medium;
+      }
+
+      i.fa {
+        width: 10px;
+        margin-right: 5px;
+      }
+    }
+
+    &__status {
+      font-weight: $font-bold;
+      text-transform: uppercase;
+      float: right;
+      margin-right: 12px;
+
+      // в работе
+      &.work {
+        @include status($viking)
+      }
+
+      // обработано
+      &.done {
+        @include status($nastyGreen)
+      }
+
+      // новое
+      &.new {
+        @include status($darkMintGreen)
+      }
+
+      &::before {
+        content: "";
+        margin: 4px 6px;
+        width: 6px;
+        height: 6px;
+        display: block;
+        float: left;
+        z-index: 1;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.leaflet-map__leaflet-custom-marker {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: solid 1px $steelBlue;
+  display: block;
+  box-shadow: $boxShadowMarkers;
+
+  &_status {
+    &_work {
+      background-color: $viking;
+    }
+
+    &_done {
+      background-color: $nastyGreen;
+    }
+
+    &_new {
+      background-color: $darkMintGreen;
+    }
+
+    &_declined {
+      background-color: $watermelon;
+    }
+  }
+
+  &_emergency {
+    width: 55px;
+    height: 55px;
+    border: none;
+    background: $whiteSolid url("../../images/emergency.svg") right no-repeat;
+    margin-left: -15px;
+  }
+}

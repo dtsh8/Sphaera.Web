@@ -1,0 +1,26 @@
+@import 'sass/style';
+
+.app-menu {
+  font-family: $exo2, sans-serif;
+  font-weight: 700;
+  background-color: #FFF !important;
+  border-bottom: 1px solid $lightGray;
+  background-image: none !important;
+  box-shadow: none !important;
+
+  &__nav {
+    margin-left: 8.33333333% !important;
+  }
+
+  &__menu-item > a {
+    text-align: left;
+    color: $endeavour !important;
+    font-size: $font-lg;
+    font-weight: $font-regular;
+    padding: 51px 25px 51px 0 !important;
+  }
+
+  &__menu-item > a:hover {
+    text-decoration: underline !important;
+  }
+}

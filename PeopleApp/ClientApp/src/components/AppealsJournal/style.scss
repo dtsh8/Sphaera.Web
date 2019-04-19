@@ -1,0 +1,27 @@
+@import 'sass/style';
+
+.appeals-journal {
+  &__empty-button-wrapper {
+    margin-top: 40px;
+  }
+
+  .dx-button {
+    padding: 6px 15px;
+    background: $darkMintGreen;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: $roboto, sans-serif;
+  }
+
+  &__appeal-button-wrapper {
+    position: absolute;
+    top: 7px;
+    right: 30px;
+    z-index: 1;
+  }
+
+  &__data-grid-wrapper {
+    position: relative;
+  }
+}

@@ -1,0 +1,28 @@
+@import 'sass/style';
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $porcelain;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 30px 0 20px;
+  }
+
+  &__item-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: $blackSolid;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    font-size: 16px;
+    color: $scorpion;
+    margin-bottom: 20px;
+  }
+}

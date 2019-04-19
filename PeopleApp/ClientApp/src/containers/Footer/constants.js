@@ -1,0 +1,2 @@
+export const GET_FOOTER_DATA = 'GET_FOOTER_DATA';
+export const FOOTER_DATA_LOADED = 'FOOTER_DATA_LOADED';

@@ -1,0 +1,16 @@
+@import 'sass/style';
+
+.breadcrumb {
+  background-color: $whiteSolid !important;
+  padding: 5px 0 0 0 !important;
+  margin-bottom: 0 !important;
+
+  & > li {
+    opacity: 0.4;
+    font-size: 18px;
+
+    &:before {
+      padding: 0 8px !important;
+    }
+  }
+}

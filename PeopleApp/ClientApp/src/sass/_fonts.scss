@@ -1,0 +1,124 @@
+$path: './lib/fonts/';
+$exo2Path: $path + 'Exo2/';
+$robotoPath: $path + 'Roboto/';
+$icomoonPath: $path + 'icomoon/fonts/';
+
+@mixin font-face($font-family, $font-family-exact, $font-file, $font-weight: 400, $font-style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: local($font-family), local($font-family-exact), url($font-file + '.woff2') format('woff2'), url($font-file + '.woff') format('woff'), url($font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@include font-face('Exo 2', 'Exo2-Regular', $exo2Path + 'exo2');
+@include font-face('Exo 2', 'Exo2-Medium', $exo2Path + 'exo2medium', 500);
+@include font-face('Exo 2', 'Exo2-Bold', $exo2Path + 'exo2bold', 700);
+
+@include font-face('Roboto', 'Roboto-Regular', $robotoPath + 'Roboto');
+@include font-face('Roboto', 'Roboto-Medium', $robotoPath + 'Robotomedium', 500);
+@include font-face('Roboto', 'Roboto-Bold', $robotoPath + 'Robotobold', 700);
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url($icomoonPath + 'icomoon.eot?uwq4e0');
+  src:  url($icomoonPath + 'icomoon.eot?uwq4e0#iefix') format('embedded-opentype'),
+  url($icomoonPath + 'icomoon.ttf?uwq4e0') format('truetype'),
+  url($icomoonPath + 'icomoon.woff?uwq4e0') format('woff'),
+  url($icomoonPath + 'icomoon.svg?uwq4e0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-delete:before {
+  content: "\e915";
+  color: #d1d1d1;
+}
+.icon-file:before {
+  content: "\e914";
+}
+.icon-download-2:before {
+  content: "\e912";
+  color: #57b1df;
+}
+.icon-download-3:before {
+  content: "\e913";
+  color: #d1d1d1;
+}
+.icon-close-button:before {
+  content: "\e911";
+}
+.icon-arrow-left:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-check:before {
+  content: "\e902";
+  color: #0263b2;
+}
+.icon-comment:before {
+  content: "\e903";
+}
+.icon-download:before {
+  content: "\e904";
+  color: #838383;
+}
+.icon-eye:before {
+  content: "\e905";
+}
+.icon-filter:before {
+  content: "\e906";
+}
+.icon-filter-n:before {
+  content: "\e907";
+}
+.icon-lock:before {
+  content: "\e908";
+  color: #b7b7b7;
+}
+.icon-map:before {
+  content: "\e909";
+}
+.icon-pdf:before {
+  content: "\e90a";
+  color: #ff3835;
+}
+.icon-printer:before {
+  content: "\e90b";
+}
+.icon-right:before {
+  content: "\e90c";
+}
+.icon-search:before {
+  content: "\e90d";
+}
+.icon-user:before {
+  content: "\e90e";
+  color: #b7b7b7;
+}
+.icon-user-icon:before {
+  content: "\e90f";
+  color: #114f6f;
+}
+.icon-word:before {
+  content: "\e910";
+  color: #00a8f9;
+}

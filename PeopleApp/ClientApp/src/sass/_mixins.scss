@@ -1,0 +1,8 @@
+@import './responsive';
+
+@mixin transition($sec) {
+  -webkit-transition: all $sec ease-out;
+  -moz-transition: all $sec ease-out;
+  -o-transition: all $sec ease-out;
+  transition: all $sec ease-out;
+}

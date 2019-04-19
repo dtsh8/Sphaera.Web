@@ -1,0 +1,46 @@
+@import 'sass/style';
+
+.reminders-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  @include media-query(sm) {
+    padding: 15px 0;
+  }
+
+  @include media-query(xs) {
+    padding: 0;
+  }
+
+  &__divider {
+    height: 1px;
+    width: 100%;
+    background-color: $lightGray;
+  }
+
+  &__title-content {
+    font-family: $exo2, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 0;
+
+    @include media-query(sm) {
+      font-size: 30px;
+    }
+
+    @include media-query(xs) {
+      font-size: 20px;
+    }
+  }
+
+  .breadcrumb > li {
+    @include media-query(sm) {
+      font-size: 14px;
+    }
+
+    @include media-query(xs) {
+      font-size: 12px;
+    }
+  }
+}

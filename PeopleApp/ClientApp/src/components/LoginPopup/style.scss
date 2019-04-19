@@ -1,0 +1,95 @@
+@import 'sass/style';
+
+.login-popup {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: $endeavour;
+  color: $whiteSolid;
+
+  &__wrapper {
+    &_max-content {
+      position: unset;
+      width: max-content;
+    }
+  }
+
+  .dx-texteditor-input {
+    font-family: $roboto, sans-serif;
+    padding: 12px 20px;
+  }
+
+  .username {
+    .dx-texteditor-container {
+      position: relative;
+      &:before {
+        content: '\e90e';
+        font-family: $icomoon;
+        position: absolute;
+        right: 14px;
+        top: 8px;
+        color: $nobel;
+        font-size: 18px;
+      }
+    }
+
+    .dx-texteditor-input {
+      padding-right: 35px;
+    }
+  }
+
+  .password {
+    .dx-texteditor-container {
+      position: relative;
+      &:before {
+        content: '\e908';
+        font-family: $icomoon;
+        position: absolute;
+        right: 18px;
+        top: 8px;
+        color: $nobel;
+        font-size: 20px;
+      }
+    }
+
+    .dx-texteditor-input {
+      padding-right: 35px;
+    }
+  }
+
+  .dx-placeholder {
+    padding: 12px 20px;
+
+    &:before {
+      padding: 0;
+    }
+  }
+
+  .dx-checkbox {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  &__button {
+    color: $endeavour;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  &__labels {
+    display: flex;
+    flex-direction: row;
+
+    span {
+      flex-grow: 1;
+      color: $whiteSolid;
+      font-size: 14px;
+    }
+
+    span:first-child {
+      text-align: left;
+    }
+  }
+}

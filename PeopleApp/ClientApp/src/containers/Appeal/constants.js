@@ -1,0 +1,6 @@
+export const LOAD_APPEAL = 'LOAD_APPEAL';
+export const APPEAL_LOADED = 'APPEAL_LOADED';
+
+export const DOWNLOAD_FILE = 'DOWNLOAD_FILE';
+
+export const DOWNLOAD_ALL_FILES = 'DOWNLOAD_ALL_FILES';
